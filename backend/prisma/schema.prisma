@@ -12,8 +12,8 @@ model User {
   email     String   @unique
   name      String
   password  String
-  skill     Int
-  location  String
+  skill     Int      @default(1)
+  location  String?
   isPremium Boolean  @default(false)
   createdAt DateTime @default(now())
   bookings  Booking[]
